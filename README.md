@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 2021 hoscoc Project
 
 ## todo
@@ -16,6 +17,16 @@
 - [ ] MM07
 
 # Theme Color
+=======
+# hoscoc-project-frontend
+
+# todo
+- main page []
+- sub page  []
+- logo []
+
+# color code
+>>>>>>> 436c08b3d966a483e1f6149c2b962a8048adf5c6
 
 - #82ccdd
 - #60a3bc
@@ -25,6 +36,7 @@
 - #4a69bd
 - #1e3799
 - #0c2461
+<<<<<<< HEAD
 
 ### React Project Needs Babel Packpage
 
@@ -47,3 +59,5 @@
 - src
 
   1. main.js
+=======
+>>>>>>> 436c08b3d966a483e1f6149c2b962a8048adf5c6
