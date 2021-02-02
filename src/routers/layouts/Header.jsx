@@ -73,28 +73,26 @@ const Header = () => {
         </Fade>
       </InnerWrapper>
       <InnerWrapper>
-        <Fade>
-          <SpanText>
-            <Link to="/" style={{ color: "#3c6382", width: "100%" }}>
-              Intro
-            </Link>
-          </SpanText>
-          <SpanText>
-            <Link to="/" style={{ color: "#3c6382", width: "100%" }}>
-              How to use
-            </Link>
-          </SpanText>
-          <SpanText>
-            <Link to="/" style={{ color: "#3c6382", width: "100%" }}>
-              Service
-            </Link>
-          </SpanText>
-          <SpanText>
-            <Link to="/" style={{ color: "#3c6382", width: "100%" }}>
-              Communtiy
-            </Link>
-          </SpanText>
-        </Fade>
+        <SpanText>
+          <Link to="/" style={{ color: "#3c6382", width: "100px" }}>
+            Intro
+          </Link>
+        </SpanText>
+        <SpanText>
+          <Link to="/" style={{ color: "#3c6382", width: "200px" }}>
+            Contact
+          </Link>
+        </SpanText>
+        <SpanText>
+          <Link to="/" style={{ color: "#3c6382", width: "100px" }}>
+            Service
+          </Link>
+        </SpanText>
+        <SpanText>
+          <Link to="/" style={{ color: "#3c6382", width: "100px" }}>
+            Communtiy
+          </Link>
+        </SpanText>
       </InnerWrapper>
       <SignWrapper>
         <ActionButton>SING IN</ActionButton>
