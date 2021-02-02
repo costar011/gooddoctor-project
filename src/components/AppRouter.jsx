@@ -17,7 +17,7 @@ const WholeWrapper = styled.div`
 `;
 
 const FirstWrapper = styled.div`
-  background: linear-gradient(to bottom right, #acd7d6, #eef8f6);
+  background: linear-gradient(to right, #acd7d6, #eef8f6);
 `;
 
 const AppRouter = () => {
