@@ -7,7 +7,7 @@ const FooterWrapper = styled.div`
   height: 35vh;
   margin-top: 40px;
 
-  background-color: ${(props) => props.theme.mainThemeColor};
+  background-color: ${(props) => props.theme.subThemeColor};
 
   display: flex;
   flex-direction: row;
