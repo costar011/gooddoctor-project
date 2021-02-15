@@ -74,22 +74,22 @@ const Header = () => {
       </InnerWrapper>
       <InnerWrapper>
         <SpanText>
-          <Link to="/" style={{ color: "#3c6382", width: "100px" }}>
+          <Link to="/mm03" style={{ color: "#3c6382", width: "100px" }}>
             Intro
           </Link>
         </SpanText>
         <SpanText>
-          <Link to="/" style={{ color: "#3c6382", width: "200px" }}>
+          <Link to="/mm04" style={{ color: "#3c6382", width: "200px" }}>
             Contact
           </Link>
         </SpanText>
         <SpanText>
-          <Link to="/" style={{ color: "#3c6382", width: "100px" }}>
+          <Link to="/mm05" style={{ color: "#3c6382", width: "100px" }}>
             Service
           </Link>
         </SpanText>
         <SpanText>
-          <Link to="/" style={{ color: "#3c6382", width: "100px" }}>
+          <Link to="/mm06" style={{ color: "#3c6382", width: "100px" }}>
             Communtiy
           </Link>
         </SpanText>
