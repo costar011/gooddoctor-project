@@ -89,17 +89,7 @@ const PostButton = styled.button`
   }
 `;
 
-const MM08Presenter = (
-  newEmail,
-  newName,
-  newNickName,
-  newMobile,
-  newZoneCode,
-  newAddress,
-  newDetailAddress,
-  registUserHandler,
-  searchPostHandler
-) => {
+const MM08Presenter = () => {
   return (
     <Wrapper>
       <Typist
@@ -111,33 +101,23 @@ const MM08Presenter = (
       </Typist>
 
       <Fade bottom>
-        <TextInput type="text" placeholder={`EMAIL...`} {...newEmail} />
-        <TextInput type="text" placeholder={`NAME...`} {...newName} />
-        <TextInput type="text" placeholder={`NICKNAME...`} {...newNickName} />
-        <TextInput type="text" placeholder={`MOBILE...`} {...newMobile} />
+        <TextInput type="text" placeholder={`EMAIL...`} />
+        <TextInput type="text" placeholder={`NAME...`} />
+        <TextInput type="text" placeholder={`NICKNAME...`} />
+        <TextInput type="text" placeholder={`MOBILE...`} />
         <RowWrapper>
           <TextInput
             type="text"
             width={`300px`}
             placeholder={`32603`}
             readOnly={true}
-            {...newZoneCode}
           />
-          <PostButton onClick={() => searchPostHandler}>검색</PostButton>
+          <PostButton onClick={() => alert("Click!")}>검색</PostButton>
         </RowWrapper>
-        <TextInput
-          type="text"
-          placeholder={`ADDRESS...`}
-          readOnly={true}
-          {...newAddress}
-        />
-        <TextInput
-          type="text"
-          placeholder={`DETAILADDRESS...`}
-          {...newDetailAddress}
-        />
+        <TextInput type="text" placeholder={`ADDRESS...`} readOnly={true} />
+        <TextInput type="text" placeholder={`DETAILADDRESS...`} />
 
-        <Button onClick={() => registUserHandler}>SIGN UP</Button>
+        <Button onClick={() => alert("Click!")}>SIGN UP</Button>
       </Fade>
     </Wrapper>
   );

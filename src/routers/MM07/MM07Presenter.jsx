@@ -68,13 +68,7 @@ const Button = styled.button`
   }
 `;
 
-const MM07Presenter = (
-  inputEmail,
-  loginClickHandler,
-  tab,
-  assignment,
-  assignmentCheckHandler
-) => {
+const MM07Presenter = () => {
   return (
     <Wrapper>
       <Typist
@@ -87,19 +81,10 @@ const MM07Presenter = (
 
       <Fade>
         <RowWrapper>
-          <TextInput placeholder={`EMAIL…`} {...inputEmail} />
-          <Button onClick={() => loginClickHandler}>LOGIN</Button>
+          <TextInput placeholder={`EMAIL…`} />
+          <Button onClick={() => alert("Click!")}>LOGIN</Button>
         </RowWrapper>
       </Fade>
-
-      {tab === 0 && (
-        <Fade>
-          <RowWrapper>
-            <TextInput placeholder={`SECRET CODE…`} {...assignment} />
-            <Button onClick={() => assignmentCheckHandler}>인증하기</Button>
-          </RowWrapper>
-        </Fade>
-      )}
     </Wrapper>
   );
 };
