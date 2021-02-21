@@ -11,6 +11,7 @@ import MM04 from "../routers/MM04";
 import MM05 from "../routers/MM05";
 import MM06 from "../routers/MM06";
 import MM07 from "../routers/MM07";
+import MM08 from "../routers/MM08";
 
 const WholeWrapper = styled.div`
   width: 100%;
@@ -38,6 +39,7 @@ const AppRouter = () => {
         <Route exact path="/mm05" component={MM05} />
         <Route exact path="/mm06" component={MM06} />
         <Route exact path="/mm07" component={MM07} />
+        <Route exact path="/mm08" component={MM08} />
 
         {/* FOOTER */}
         <Route path="/" component={Footer} />
