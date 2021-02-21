@@ -26,7 +26,7 @@ const TextInput = styled.input`
   width: ${(props) => props.width || `450px`};
   height: 35px;
   border-radius: 10px;
-  margin: 0px 10px;
+  margin: 10px 0px;
   padding: 0px 10px;
   outline: none;
   border: 1px solid ${(props) => props.theme.greyColor};
@@ -50,7 +50,7 @@ const Title = styled.h2`
 `;
 
 const Button = styled.button`
-  width: 80px;
+  width: 250px;
   height: 30px;
   border-radius: ${(props) => props.theme.radius};
   outline: none;
@@ -58,6 +58,7 @@ const Button = styled.button`
   background-color: ${(props) => props.theme.checkColor};
   color: ${(props) => props.theme.whiteColor};
   cursor: pointer;
+  margin: 20px 0px 50px 0px;
 
   transition: 0.5s;
 
@@ -68,7 +69,27 @@ const Button = styled.button`
   }
 `;
 
-const MM07Presenter = () => {
+const PostButton = styled.button`
+  width: 140px;
+  height: 30px;
+  border-radius: ${(props) => props.theme.radius};
+  outline: none;
+  border: none;
+  background-color: ${(props) => props.theme.pointColor};
+  color: ${(props) => props.theme.whiteColor};
+  cursor: pointer;
+  margin-left: 10px;
+
+  transition: 0.5s;
+
+  &:hover {
+    background-color: ${(props) => props.theme.whiteColor};
+    border: 1px solid ${(props) => props.theme.pointColor};
+    color: ${(props) => props.theme.pointColor};
+  }
+`;
+
+const MM08Presenter = () => {
   return (
     <Wrapper>
       <Typist
@@ -76,17 +97,30 @@ const MM07Presenter = () => {
           show: false,
         }}
       >
-        <Title>SIGN IN</Title>
+        <Title>SIGN UP</Title>
       </Typist>
 
-      <Fade>
+      <Fade bottom>
+        <TextInput type="text" placeholder={`EMAIL...`} />
+        <TextInput type="text" placeholder={`NAME...`} />
+        <TextInput type="text" placeholder={`NICKNAME...`} />
+        <TextInput type="text" placeholder={`MOBILE...`} />
         <RowWrapper>
-          <TextInput placeholder={`EMAIL…`} />
-          <Button>LOGIN</Button>
+          <TextInput
+            type="text"
+            width={`300px`}
+            placeholder={`32603`}
+            readOnly={true}
+          />
+          <PostButton>검색</PostButton>
         </RowWrapper>
+        <TextInput type="text" placeholder={`ADDRESS...`} readOnly={true} />
+        <TextInput type="text" placeholder={`DETAILADDRESS...`} />
+
+        <Button>SIGN UP !</Button>
       </Fade>
     </Wrapper>
   );
 };
 
-export default MM07Presenter;
+export default MM08Presenter;

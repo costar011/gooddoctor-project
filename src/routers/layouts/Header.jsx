@@ -94,9 +94,14 @@ const Header = () => {
           </Link>
         </SpanText>
       </InnerWrapper>
+
       <SignWrapper>
-        <ActionButton>SING IN</ActionButton>
-        <ActionButton>SING UP</ActionButton>
+        <Link to="/mm07">
+          <ActionButton>SING IN</ActionButton>
+        </Link>
+        <Link to="/mm08">
+          <ActionButton>SING UP</ActionButton>
+        </Link>
       </SignWrapper>
     </HeaderWrapper>
   );
