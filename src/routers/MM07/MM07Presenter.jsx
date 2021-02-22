@@ -68,7 +68,13 @@ const Button = styled.button`
   }
 `;
 
-const MM07Presenter = () => {
+const MM07Presenter = (
+  inputEmail,
+  loginClickHandler,
+  tab,
+  assignment,
+  assignmentCheckHandler
+) => {
   return (
     <Wrapper>
       <Typist
@@ -79,12 +85,11 @@ const MM07Presenter = () => {
         <Title>SIGN IN</Title>
       </Typist>
 
-      <Fade>
-        <RowWrapper>
-          <TextInput placeholder={`EMAIL…`} />
-          <Button onClick={() => alert("Click!")}>LOGIN</Button>
-        </RowWrapper>
-      </Fade>
+      {tab === 0 && (
+        <Fade>
+          <RowWrapper></RowWrapper>
+        </Fade>
+      )}
     </Wrapper>
   );
 };
