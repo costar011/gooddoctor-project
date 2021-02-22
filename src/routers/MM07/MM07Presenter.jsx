@@ -20,6 +20,7 @@ const RowWrapper = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  margin: 10px;
 `;
 
 const TextInput = styled.input`
@@ -35,11 +36,11 @@ const TextInput = styled.input`
   transition: 0.5s;
 
   &:hover {
-    box-shadow: 5px 5px 5px #777;
+    box-shadow: 5px 5px 5px #0b0b0b;
   }
 
   &:focus {
-    box-shadow: 5px 5px 5px #777;
+    box-shadow: 5px 5px 5px #0b0b0b;
   }
 `;
 
@@ -71,7 +72,6 @@ const Button = styled.button`
 const MM07Presenter = (
   inputEmail,
   loginClickHandler,
-  tab,
   assignment,
   assignmentCheckHandler
 ) => {
@@ -85,11 +85,19 @@ const MM07Presenter = (
         <Title>SIGN IN</Title>
       </Typist>
 
-      {tab === 0 && (
-        <Fade>
-          <RowWrapper></RowWrapper>
-        </Fade>
-      )}
+      <Fade>
+        <RowWrapper>
+          <TextInput placeholder={`EMAIL…`} {...inputEmail} />
+          <Button onClick={() => loginClickHandler}>LOGIN</Button>
+        </RowWrapper>
+      </Fade>
+
+      <Fade>
+        <RowWrapper>
+          <TextInput placeholder={`SECRET CODE…`} {...assignment} />
+          <Button onClick={() => assignmentCheckHandler}>인증하기</Button>
+        </RowWrapper>
+      </Fade>
     </Wrapper>
   );
 };

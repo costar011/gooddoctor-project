@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 import MM07Presenter from "./MM07Presenter";
-import { LOGIN, CHECK_SECRET_CODE } from "./MM07Queries";
 import useInput from "../../Hooks/useInput";
 import { useMutation } from "react-apollo-hooks";
+import { TRY_LOGIN, CHECK_SECRET_CODE } from "./MM07Queries";
 
-const MM07Container = ({ history }) => {
+const MM07Container = () => {
   ////////   VARIABLE     ////////
 
   ////////   USE STATE    ////////
   const inputEmail = useInput(``);
   const assignment = useInput(``);
+
   const [tab, setTab] = useState(0);
 
   ////////   USE REF      ////////
@@ -19,13 +20,12 @@ const MM07Container = ({ history }) => {
   ////////   USE QUREY    ////////
 
   ////////   USE MUTATION ////////
-  const [LoginMutation] = useMutation(LOGIN);
+  const [tryLoginMutation] = useMutation(TRY_LOGIN);
   const [checkSecretCodeMutation] = useMutation(CHECK_SECRET_CODE);
 
   ////////   USE EFFECT   ////////
-
   const loginClickHandler = async () => {
-    const { data } = await LoginMutation({
+    const { data } = await tryLoginMutation({
       variables: {
         email: inputEmail.value,
       },
@@ -39,6 +39,8 @@ const MM07Container = ({ history }) => {
   };
 
   const assignmentCheckHandler = async () => {
+    console.log(assignment.value);
+
     const { data } = await checkSecretCodeMutation({
       variables: {
         email: inputEmail.value,
@@ -46,25 +48,19 @@ const MM07Container = ({ history }) => {
       },
     });
 
-    if (data.checkSecretCode.result) {
-      alert("login");
-      sessionStorage.setItem("KDUWSU@SUF", data.checkSecretCode.objectId);
+    if (data.checkSecretCode) {
+      alert("로그인 성공");
       history.push("/");
-
-      window.location.reload();
-    } else {
-      alert("인증코드가 잘못되었습니다.");
     }
-    console.log(data);
   };
 
   return (
     <MM07Presenter
       inputEmail={inputEmail}
-      loginClickHandler={loginClickHandler}
-      tab={tab}
       assignment={assignment}
+      loginClickHandler={loginClickHandler}
       assignmentCheckHandler={assignmentCheckHandler}
+      tab={tab}
     />
   );
 };
