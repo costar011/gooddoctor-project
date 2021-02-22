@@ -97,10 +97,17 @@ const Header = () => {
 
       <SignWrapper>
         <Link to="/mm07">
+<<<<<<< HEAD
           <ActionButton>SIGN IN</ActionButton>
         </Link>
         <Link to="mm08">
           <ActionButton>SIGN UP</ActionButton>
+=======
+          <ActionButton>SING IN</ActionButton>
+        </Link>
+        <Link to="/mm08">
+          <ActionButton>SING UP</ActionButton>
+>>>>>>> dc53e60c826711c821eab29da7bd72a26c6d18a5
         </Link>
       </SignWrapper>
     </HeaderWrapper>

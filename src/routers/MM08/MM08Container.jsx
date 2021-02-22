@@ -4,7 +4,7 @@ import MM08Presenter from "./MM08Presenter";
 const MM08Container = () => {
   ////////   VARIABLE     ////////
 
-  ////////   USE STATE    ////////
+  //////////// USE STATE  ///////////////////
 
   ////////   USE REF      ////////
 
@@ -12,9 +12,11 @@ const MM08Container = () => {
 
   ////////   USE QUREY    ////////
 
-  ////////   USE MUTATION ////////
+  //////////// USE MUTATION  ////////////////
 
   ////////   USE EFFECT   ////////
+
+  ////////////// HANDLER  //////////////////
 
   return <MM08Presenter />;
 };

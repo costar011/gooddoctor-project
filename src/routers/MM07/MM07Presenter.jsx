@@ -82,7 +82,7 @@ const MM07Presenter = () => {
       <Fade>
         <RowWrapper>
           <TextInput placeholder={`EMAIL…`} />
-          <Button>LOGIN</Button>
+          <Button onClick={() => alert("Click!")}>LOGIN</Button>
         </RowWrapper>
       </Fade>
     </Wrapper>

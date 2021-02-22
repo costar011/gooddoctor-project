@@ -112,12 +112,12 @@ const MM08Presenter = () => {
             placeholder={`32603`}
             readOnly={true}
           />
-          <PostButton>검색</PostButton>
+          <PostButton onClick={() => alert("Click!")}>검색</PostButton>
         </RowWrapper>
         <TextInput type="text" placeholder={`ADDRESS...`} readOnly={true} />
         <TextInput type="text" placeholder={`DETAILADDRESS...`} />
 
-        <Button>SIGN UP !</Button>
+        <Button onClick={() => alert("Click!")}>SIGN UP</Button>
       </Fade>
     </Wrapper>
   );
