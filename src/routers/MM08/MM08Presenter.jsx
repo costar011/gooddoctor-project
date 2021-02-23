@@ -104,8 +104,8 @@ const MM08Presenter = (
   newZoneCode,
   newAddress,
   newDetailAddress,
-  registUserHandler,
-  searchPostHandler
+  searchPostHandler,
+  registUserHandler
 ) => {
   return (
     <Wrapper>
@@ -129,7 +129,7 @@ const MM08Presenter = (
             readOnly={true}
             {...newZoneCode}
           />
-          <PostButton onClick={() => searchPostHandler}>검색</PostButton>
+          <PostButton onClick={searchPostHandler}>검색</PostButton>
         </RowWrapper>
         <TextInput
           type="text"
@@ -143,7 +143,7 @@ const MM08Presenter = (
           {...newDetailAddress}
         />
 
-        <Button onClick={() => registUserHandler}>SIGN UP !</Button>
+        <Button onClick={registUserHandler}>SIGN UP !</Button>
       </Fade>
     </Wrapper>
   );
