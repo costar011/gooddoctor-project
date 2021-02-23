@@ -69,12 +69,12 @@ const Button = styled.button`
   }
 `;
 
-const MM07Presenter = (
+const MM07Presenter = ({
   inputEmail,
   loginClickHandler,
   assignment,
-  assignmentCheckHandler
-) => {
+  assignmentCheckHandler,
+}) => {
   return (
     <Wrapper>
       <Typist
@@ -88,14 +88,14 @@ const MM07Presenter = (
       <Fade>
         <RowWrapper>
           <TextInput placeholder={`EMAIL…`} {...inputEmail} />
-          <Button onClick={() => loginClickHandler}>LOGIN</Button>
+          <Button onClick={loginClickHandler}>LOGIN</Button>
         </RowWrapper>
       </Fade>
 
       <Fade>
         <RowWrapper>
           <TextInput placeholder={`SECRET CODE…`} {...assignment} />
-          <Button onClick={() => assignmentCheckHandler}>인증하기</Button>
+          <Button onClick={assignmentCheckHandler}>인증하기</Button>
         </RowWrapper>
       </Fade>
     </Wrapper>

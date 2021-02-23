@@ -96,7 +96,7 @@ const PostButton = styled.button`
   }
 `;
 
-const MM08Presenter = (
+const MM08Presenter = ({
   newEmail,
   newName,
   newNickName,
@@ -105,8 +105,8 @@ const MM08Presenter = (
   newAddress,
   newDetailAddress,
   searchPostHandler,
-  registUserHandler
-) => {
+  registUserHandler,
+}) => {
   return (
     <Wrapper>
       <Typist
