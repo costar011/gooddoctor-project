@@ -63,7 +63,7 @@ const SpanText = styled.span`
 const LogoText = styled.span`
   font-size: 30px;
   font-weight: 800;
-  color: #23435e;
+  color: #8393a0;
   margin-bottom: 20px;
 `;
 

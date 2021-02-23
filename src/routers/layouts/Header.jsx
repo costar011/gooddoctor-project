@@ -62,14 +62,32 @@ const ActionButton = styled.button`
   }
 `;
 
-const Header = () => {
+const ActionSpan = styled.span`
+  padding: 5px;
+  margin: 5px;
+  color: ${(props) => props.theme.whiteColor};
+  cursor: pointer;
+  transition: 0.5s;
+
+  &:hover {
+    color: ${(props) => props.theme.pointColor};
+  }
+`;
+
+const Header = ({ history }) => {
+  const moveLinkHandler = (link) => {
+    history.push(link);
+  };
+
   return (
     <HeaderWrapper>
       <InnerWrapper>
         <Fade>
-          <NavLink to="/">
-            <LogoText>Hoscoc</LogoText>
-          </NavLink>
+          <ActionSpan onClick={() => moveLinkHandler("/")}>
+            <NavLink to="/">
+              <LogoText>Hoscoc</LogoText>
+            </NavLink>
+          </ActionSpan>
         </Fade>
       </InnerWrapper>
       <InnerWrapper>

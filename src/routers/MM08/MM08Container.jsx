@@ -73,6 +73,10 @@ const MM08Container = () => {
     });
 
     console.log(data);
+
+    if (data.length !== 0) {
+      alert("회원가입이 완료되었습니다.");
+    }
   };
 
   const searchPostHandler = () => {
@@ -80,8 +84,6 @@ const MM08Container = () => {
       oncomplete: function (data) {
         newZoneCode.setValue(data.zonecode);
         newAddress.setValue(data.address);
-        // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분입니다.
-        // 예제를 참고하여 다양한 활용법을 확인해 보세요.
       },
     }).open();
   };

@@ -4,7 +4,7 @@ import useInput from "../../Hooks/useInput";
 import { useMutation } from "react-apollo-hooks";
 import { TRY_LOGIN, CHECK_SECRET_CODE } from "./MM07Queries";
 
-const MM07Container = () => {
+const MM07Container = ({ history }) => {
   ////////   VARIABLE     ////////
 
   ////////   USE STATE    ////////
@@ -33,6 +33,7 @@ const MM07Container = () => {
 
     if (data.tryLogin) {
       setTab(1);
+      alert("전송된 인증번호를 입력해주세요");
     } else {
       alert("가입된 이메일이 아닙니다.");
     }
