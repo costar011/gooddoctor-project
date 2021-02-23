@@ -90,7 +90,7 @@ const Header = () => {
         </SpanText>
         <SpanText>
           <Link to="/mm06" style={{ color: "#3c6382", width: "100px" }}>
-            Communtiy
+            Community
           </Link>
         </SpanText>
       </InnerWrapper>
