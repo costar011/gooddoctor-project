@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Typist from "react-typist";
+import MM07Container from "../MM07/MM07Container";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -28,16 +29,26 @@ const SearchBox = styled.div`
   margin: 20px;
 `;
 
+const SearchList = styled.div`
+  width: ${(props) => props.width || `1300px`};
+  height: ${(props) => props.height || `400px`};
+  margin-left: 20px;
+
+  outline: none;
+  border: 1px solid #777;
+  background: none;
+`;
+
 const SearchInput = styled.input`
-  width: ${(props) => props.width || `300px`};
-  height: 25px;
-  border-radius: 3px;
+  width: ${(props) => props.width || `400px`};
+
   margin: 0px 10px;
   padding: 0px 10px;
 
   outline: none;
-  border: 1px solid #848484;
-  background: none;
+  background-color: none;
+  border: none;
+  border-bottom: 1px solid #000;
 `;
 
 const Button = styled.button`
@@ -73,8 +84,12 @@ const MM06Presenter = () => {
       </Typist>
 
       <SearchBox>
-        <SearchInput />
-        <Button>검색</Button>
+        <SearchInput placeholder="제목검색..." />
+        <Button onClick={() => alert("검색이 완료됨")}>검색</Button>
+      </SearchBox>
+
+      <SearchBox>
+        <SearchList />
       </SearchBox>
     </Wrapper>
   );
