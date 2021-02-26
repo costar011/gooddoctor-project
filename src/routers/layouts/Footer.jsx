@@ -44,8 +44,8 @@ const Footer = () => {
           2020-54-1002호 / 직업정보제공사업 신고번호 : J7395720152
         </FooterTxt>
         <FooterTxt>
-          대표이사 : 김경민, 방효진, 정예림 / 개인정보관리책임자 :
-          김경민,방효진, 정예림
+          대표이사 : 김경민, 방효진, 정예림 / 개인정보관리책임자 : 김경민,
+          방효진, 정예림
         </FooterTxt>
         <FooterTxt>© 2021 hoscoc</FooterTxt>
       </Wrapper>

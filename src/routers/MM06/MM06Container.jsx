@@ -1,5 +1,6 @@
 import React from "react";
 import MM06Presenter from "./MM06Presenter";
+import { Communtiy_List } from "./MM06Queries";
 
 const MM06Container = () => {
   ////////   VARIABLE     ////////

@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import Typist from "react-typist";
-import MM07Container from "../MM07/MM07Container";
 
 const Wrapper = styled.div`
   width: 100%;
