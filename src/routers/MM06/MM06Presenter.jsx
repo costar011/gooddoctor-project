@@ -29,7 +29,7 @@ const SearchBox = styled.div`
 `;
 
 const SearchList = styled.div`
-  width: ${(props) => props.width || `1300px`};
+  width: ${(props) => props.width || `1000px`};
   height: ${(props) => props.height || `400px`};
   margin-left: 20px;
 
@@ -50,7 +50,7 @@ const SearchInput = styled.input`
   border-bottom: 1px solid #000;
 `;
 
-const Button = styled.button`
+const SearchButton = styled.button`
   width: 80px;
   height: 30px;
   border-radius: ${(props) => props.theme.radius};
@@ -71,6 +71,31 @@ const Button = styled.button`
   }
 `;
 
+const WriteBox = styled.div`
+  height: 60px;
+`;
+
+const WriteButton = styled.button`
+  width: 80px;
+  height: 30px;
+  border-radius: ${(props) => props.theme.radius};
+
+  outline: none;
+  border: none;
+
+  background-color: ${(props) => props.theme.checkColor};
+  color: ${(props) => props.theme.whiteColor};
+  cursor: pointer;
+
+  transition: 0.6s;
+
+  &:hover {
+    background-color: ${(props) => props.theme.whiteColor};
+    border: 1px solid ${(props) => props.theme.checkColor};
+    color: ${(props) => props.theme.greyColor};
+  }
+`;
+
 const MM06Presenter = () => {
   return (
     <Wrapper>
@@ -84,8 +109,12 @@ const MM06Presenter = () => {
 
       <SearchBox>
         <SearchInput placeholder="제목검색..." />
-        <Button onClick={() => alert("검색이 완료됨")}>검색</Button>
+        <SearchButton onClick={() => alert("검색이 완료됨")}>검색</SearchButton>
       </SearchBox>
+
+      <WriteBox>
+        <WriteButton>등록</WriteButton>
+      </WriteBox>
 
       <SearchBox>
         <SearchList />
