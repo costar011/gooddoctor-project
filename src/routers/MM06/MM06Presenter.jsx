@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Typist from "react-typist";
+import { Link } from "react-router-dom";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -112,9 +113,11 @@ const MM06Presenter = () => {
         <SearchButton onClick={() => alert("검색이 완료됨")}>검색</SearchButton>
       </SearchBox>
 
-      <WriteBox>
-        <WriteButton>등록</WriteButton>
-      </WriteBox>
+      <Link to="mm09">
+        <WriteBox>
+          <WriteButton>등록</WriteButton>
+        </WriteBox>
+      </Link>
 
       <SearchBox>
         <SearchList />
